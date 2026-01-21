@@ -87,34 +87,29 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 ---
 
 ## n8n 워크플로우
-<img src="image-1.png" alt="워크플로우" width="1000">
+
+<div align="center">
+  <img src="wflow.gif" width="100%" alt="Vibecode 워크플로우 실행 과정">
+  <p><i>▲ Slack 멘션부터 RAG 기반 리팩토링 응답까지의 전체 자동화 과정</i></p>
+</div>
 
 ## 🚀 Workflow Steps
 
-1. **🟣 Slack Trigger**: 슬랙 @멘션을 수신하여 리팩토링 워크플로우를 시작합니다.
-2. **🌐 HTTP Request**: 구글·네이버의 최신 자바 스타일 가이드 원문을 실시간 수집합니다.
-3. **🧽 HTML Extract**: 수집된 HTML 문서에서 노이즈를 제거하고 본문 텍스트만 추출합니다.
-4. **🧩 Schema Normalize**: 추출된 텍스트에 출처(URL) 메타데이터를 부여하고 규격을 통일합니다.
-5. **🔀 Data Merge**: 분기되어 처리된 여러 문서 데이터를 하나의 흐름으로 통합합니다.
-6. **📚 RAG Indexing**: 데이터를 청크로 분할 후 Gemini 임베딩을 생성하여 Pinecone에 저장합니다.
-7. **🛑 Sync Gate** 💡: 인덱싱 완료 시까지 대기 후 단일 신호를 발생시켜 AI의 중복 실행을 방지합니다.
-8. **🤖 AI Agent**: Pinecone 검색 결과를 근거로 Gemini가 리팩토링 답변을 생성합니다.
-9. **📩 Slack Delivery**: 최종 리뷰 결과를 슬랙 스레드 답장 형식으로 전송합니다.
+**1️⃣ Slack Trigger**: 슬랙 @멘션을 수신하여 리팩토링 워크플로우를 시작합니다.
+**2️⃣ HTTP Request**: 구글·네이버의 최신 자바 스타일 가이드 원문을 실시간 수집합니다.
+**3️⃣ HTML Extract**: 수집된 HTML 문서에서 노이즈를 제거하고 본문 텍스트만 추출합니다.
+**4️⃣ Schema Normalize**: 추출된 텍스트에 출처(URL) 메타데이터를 부여하고 규격을 통일합니다.
+**5️⃣ Data Merge**: 분기되어 처리된 여러 문서 데이터를 하나의 흐름으로 통합합니다.
+**6️⃣ RAG Indexing**: 데이터를 청크로 분할 후 Gemini 임베딩을 생성하여 Pinecone에 저장합니다.
+**7️⃣ Sync Gate** 💡: 인덱싱 완료 시까지 대기 후 단일 신호를 발생시켜 AI의 중복 실행을 방지합니다.
+**8️⃣ AI Agent**: Pinecone 검색 결과를 근거로 Gemini가 리팩토링 답변을 생성합니다.
+**9️⃣ Slack Delivery**: 최종 리뷰 결과를 슬랙 스레드 답장 형식으로 전송합니다.
 
 ---
 
 <br>
 
-## 🚀 기술적 차별점 (Technical Highlight)
 
-### 💡 동기화 게이트 (Synchronization Gate)
-* **문제 상황**: 문서 인덱싱 후 생성된 수십 개의 데이터 청크가 에이전트에 동시에 전달되어 LLM이 불필요하게 반복 실행되는 비용/성능 이슈 발생.
-* **해결 방법**: **JavaScript Code 노드**를 활용해 인덱싱 완료 시 단일 `ready: true` 신호만 반환하도록 설계.
-* **결과**: **Merge(Choose Branch)** 노드를 통해 Slack 질문 원본과 완료 신호가 모두 도착했을 때만 에이전트가 실행되도록 제어하여 효율성을 극대화했습니다.
-
----
-
-<br>
 
 ## 📈 실행 결과
 
