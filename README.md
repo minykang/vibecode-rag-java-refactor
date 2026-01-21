@@ -28,6 +28,13 @@ Vibecode는 n8n을 오케스트레이터로 활용하여, Slack 멘션 한 번�
 | **Communication** | **Slack API** (Trigger & Response) |
 | **Connectivity** | **ngrok** (로컬-클라우드 협업 터널링) |
 
+
+---
+
+<br>
+
+![alt text](image.png)
+
 ---
 
 ## 🎯 프로젝트 목표
