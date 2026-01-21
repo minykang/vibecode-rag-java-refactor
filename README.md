@@ -119,7 +119,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 ## 📈 실행 결과
 
 * **Input**: Java 코드와 함께 리팩토링 요청 (@Vibecode)
-<img src="image-1.png" width="500">
+<img src="n8n-0.png" width="500">
 * **Process**: 컨벤션 실시간 수집 → Pinecone 인덱싱 → Gemini RAG 분석 → 근거 기반 답변 생성
 
 * **Output**: 
