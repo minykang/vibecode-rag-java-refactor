@@ -119,11 +119,14 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 ## 📈 실행 결과
 
 * **Input**: Java 코드와 함께 리팩토링 요청 (@Vibecode)
+<img src="image-1.png" width="500">
 * **Process**: 컨벤션 실시간 수집 → Pinecone 인덱싱 → Gemini RAG 분석 → 근거 기반 답변 생성
+
 * **Output**: 
     - 리팩토링된 최적화 코드 제공
     - **Naver Hackday Java Coding Convention** 등 공신력 있는 근거 문서(References) 인용
-
+!<img src="image-2.png" width="300">
+!<img src="image-3.png" width="310">
 ---
 
 **Vibecode**는 단순히 코드를 고치는 것을 넘어, 개발자가 "왜 이렇게 고쳐야 하는지"를 학습할 수 있는 환경을 제공합니다.
