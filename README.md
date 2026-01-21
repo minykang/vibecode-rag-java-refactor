@@ -11,17 +11,30 @@ Vibecode는 n8n을 오케스트레이터로 활용하여, Slack 멘션 한 번�
 
 ---
 
+## 👥 팀원 소개
+| <img src="https://github.com/seajihey.png" width="200px"> | <img src="https://github.com/jongyeon0214.png" width="200px"> | <img src="https://github.com/minykang.png" width="200px"> |
+| :---: | :---: | :---: |
+| [서지혜](https://github.com/seajihey) | [김종연](https://github.com/jongyeon0214) | [강민영](https://github.com/minykang) |
+
+---
+
 ## 🧰 기술 스택
 
 | 분류 | 기술 |
 | :--- | :--- |
 | **Orchestration** | **n8n** (Workflow Automation) |
-| **LLM / Embedding** | **Google Gemini 1.5 Flash**, Gemini Text-Embedding-004 |
+| **LLM / Embedding** | **Google Gemini 2.5 Flash**, Gemini Text-Embedding-004 |
 | **Vector DB** | **Pinecone** (Serverless, Cosine Similarity) |
 | **Communication** | **Slack API** (Trigger & Response) |
 | **Connectivity** | **ngrok** (로컬-클라우드 협업 터널링) |
 
 ---
+
+## 🎯 프로젝트 목표
+1. ai를 통해 작성된 코드를 자동화된 리뷰로 실무 코드와 가까운 품질로 끌어올립니다.
+2. n8n을 활용하여 Slack/Webhook 등으로 들어오는 입력을 트리거로, “수집 → 정제 → 인덱싱(RAG) → 검색 → 응답”을 노드 기반으로 오케스트레이션 하며 실무형 자동화 파이프라인을 직접 구축합니다.
+3. Google Style Guide/기업 컨벤션(네이버)/기술 블로그 등 권위 있는 문서 근거를 리뷰와 함께 제시해 “왜 이렇게 고쳤는지”를 설득력 있게 제공합니다.
+
 
 ## 🚀 기술적 차별점 (Technical Highlight)
 
