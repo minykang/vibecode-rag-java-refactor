@@ -82,13 +82,12 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 ## ⚙️ 시스템 아키텍쳐
 
-<img src="image.png" alt="시스템 아키텍쳐" width="600">
-<img src="n8n_arci.png" alt="시스템 아키텍쳐" width="600">
+<img src="image.png" alt="시스템 아키텍쳐" width="1000">
 
 ---
 
 ## n8n 워크플로우
-<img src="image-1.png" alt="워크플로우" width="600">
+<img src="image-1.png" alt="워크플로우" width="1000">
 
 ## 🚀 Workflow Steps
 
