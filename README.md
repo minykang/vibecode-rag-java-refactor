@@ -77,7 +77,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 ## ⚙️ 시스템 아키텍쳐
 
-<img src="image.png" alt="시스템 아키텍쳐" width="1000">
+<img src="images/image.png" alt="시스템 아키텍쳐" width="1000">
 
 ---
 
