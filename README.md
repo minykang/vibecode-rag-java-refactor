@@ -83,7 +83,13 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 ## n8n 워크플로우
 
-<div align="center"><video src="images/n8nPlayer.mp4" width="100%" autoplay loop muted playsinline></video><p><i>▲ 워크플로우 실행 과정</i></p></div>
+
+
+<div align="center">
+  <video src="images/flow.mp4" width="100%" autoplay loop muted playsinline style="border-radius: 10px;"></video>
+  <br>
+</div>
+>>>>>>> Stashed changes
 
 
 
