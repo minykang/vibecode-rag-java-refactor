@@ -84,7 +84,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 ## n8n 워크플로우
 
 <div align="center">
-  <img src="wflow.gif" width="100%" alt="Vibecode 워크플로우 실행 과정">
+  <img src="images/wflow.gif" width="100%" alt="Vibecode 워크플로우 실행 과정">
   <p><i>▲ Slack 멘션부터 RAG 기반 리팩토링 응답까지의 전체 자동화 과정</i></p>
 </div>
 
@@ -96,7 +96,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 **1️⃣ Slack Trigger**: 슬랙 @멘션을 수신하여 리팩토링 워크플로우를 시작합니다.<br>
 
-<img src="image-4.png" alt="slack mention" width="300">
+<img src="images/image-4.png" alt="slack mention" width="300">
 
 <br>
 
@@ -111,17 +111,17 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
   <tr>
     <td>
       <a href="https://naver.github.io/hackday-conventions-java/">
-        <img src="image-8.png" width="250px" height="150px">
+        <img src="images/image-8.png" width="250px" height="150px">
       </a>
     </td>
     <td>
       <a href="https://raw.githubusercontent.com/JunHoPark93/google-java-styleguide/master/README.md">
-        <img src="image-6.png" width="250px" height="150px">
+        <img src="images/image-6.png" width="250px" height="150px">
       </a>
     </td>
     <td>
       <a href="https://google.github.io/styleguide/javaguide.html">
-        <img src="image-7.png" width="250px" height="150px">
+        <img src="images/image-7.png" width="250px" height="150px">
       </a>
     </td>
   </tr>
@@ -140,10 +140,10 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
   </tr>
   <tr>
     <td>
-      <img src="image-9.png" alt="Raw HTTP Output" width="100%">
+      <img src="images/image-9.png" alt="Raw HTTP Output" width="100%">
     </td>
     <td>
-      <img src="image-12.png" alt="Cleaned Text Output" width="100%">
+      <img src="images/image-12.png" alt="Cleaned Text Output" width="100%">
     </td>
   </tr>
   <tr>
@@ -181,7 +181,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 **6️⃣ RAG Indexing**: 데이터를 청크로 분할 후 Gemini 임베딩을 생성하여 Pinecone에 저장합니다.
 
-<img src="image-11.png" width="350px" height="300px">
+<img src="images/image-11.png" width="350px" height="300px">
 
 <br>
 
@@ -212,7 +212,7 @@ Vibecode의 핵심인 AI 에이전트의 페르소나와 작동 규칙을 정의
 #### 📄 출력 섹션 구성
 에이전트는 모든 답변을 아래의 고정된 구조로 출력하여 일관성을 유지합니다.
 
-1. **💻 리팩토링 코드**: `java` 코드 블록 최상단 배치
+1. **💻 리팩토링 코드**: java 코드 블록 최상단 배치
 2. **🧐 Why?**: 항목별 [R#] 또는 [비근거]가 포함된 분석 결과
 3. **📚 References**: 인용된 근거의 제목 및 출처 URL 명시
 
@@ -231,8 +231,8 @@ Vibecode의 핵심인 AI 에이전트의 페르소나와 작동 규칙을 정의
 * **Output**: 
     - 리팩토링된 최적화 코드 제공
     - **Naver Hackday, Java Coding Convention** 등 공신력 있는 근거 문서 인용<br><br>
-<img src="image-2.png" width="300">
-<img src="image-3.png" width="310">
+<img src="images/image-2.png" width="500">
+<img src="images/image-3.png" width="500">
 
 **Vibecode**는 단순히 코드를 고치는 것을 넘어, 개발자가 "왜 이렇게 고쳐야 하는지"를 학습할 수 있는 환경을 제공합니다.<br><br>
 
