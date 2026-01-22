@@ -5,24 +5,20 @@
 > ✨ AI 코딩 도구가 놓치기 쉬운 컨벤션, 예외 처리, 유지보수성을 **n8n 기반 RAG 파이프라인**으로 자동 검수합니다.
 
 
-
-<br>
-
-## 👥 팀원 소개
+---
+## 👨‍👨‍👦‍👦 팀원 소개
 | <img src="https://github.com/seajihey.png" width="200px"> | <img src="https://github.com/jongyeon0214.png" width="200px"> | <img src="https://github.com/minykang.png" width="200px"> |
 | :---: | :---: | :---: |
 | [서지혜](https://github.com/seajihey) | [김종연](https://github.com/jongyeon0214) | [강민영](https://github.com/minykang) |
 
+---
 
-
-<br>
 
 ## 📌 프로젝트 개요
 Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으로 최신 Java 스타일 가이드(Google, Naver 등)를 실시간 참조(RAG)하고 단순 동작을 넘어선 엔지니어링 수준의 리팩토링 제안을 제공합니다.
 
-<br>
 
-
+---
 
 ## 🎖️ 주요 기능
 
@@ -44,9 +40,9 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 * **대화형 UI**
     * **스마트 트리거**: 슬랙 봇 멘션 시에만 즉각 반응하며, 분석 결과를 답장으로 제공해 가독성을 유지합니다.
     * **워크플로우 통합**: n8n을 중심으로 수집-인덱싱-추론-응답 전 과정을 자동화 파이프라인으로 구축했습니다.
+---
 
 
-<br>
 
 
 ## 🧰 기술 스택
@@ -60,9 +56,8 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 | **Connectivity** | **ngrok** (로컬-클라우드 협업 터널링) |
 
 
+---
 
-
-<br>
 
 ## 🎯 프로젝트 목표
 
@@ -76,18 +71,17 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 * **📚 공신력 있는 근거 중심의 리팩토링**
     * Google Style Guide, NAVER Hackday 등 권위 있는 문서 데이터를 실시간 참조하여, 리팩토링 제안에 대한 객관적인 근거와 설득력을 제공합니다.
+---
 
-
-<br>
 
 
 ## ⚙️ 시스템 아키텍쳐
 
 <img src="image.png" alt="시스템 아키텍쳐" width="1000">
 
-<br>
+---
 
-## 🔄 n8n 워크플로우
+## n8n 워크플로우
 
 <div align="center">
   <img src="wflow.gif" width="100%" alt="Vibecode 워크플로우 실행 과정">
@@ -95,7 +89,6 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 </div>
 
 
-<br>
 
 ## 🚀 Workflow Steps
 
@@ -198,9 +191,8 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 **9️⃣ Slack Delivery**: 최종 리뷰 결과를 슬랙 스레드 답장 형식으로 전송합니다.
 
+---
 
-
-<br>
 
 ## 🤖 페르소나 설계
 
@@ -226,6 +218,9 @@ Vibecode의 핵심인 AI 에이전트의 페르소나와 작동 규칙을 정의
 
 <br>
 
+---
+
+
 ## 📈 실행 결과<br>
 
 * **Input**: Java 코드와 함께 리팩토링 요청 (@Vibecode)
@@ -236,9 +231,8 @@ Vibecode의 핵심인 AI 에이전트의 페르소나와 작동 규칙을 정의
 * **Output**: 
     - 리팩토링된 최적화 코드 제공
     - **Naver Hackday, Java Coding Convention** 등 공신력 있는 근거 문서 인용<br><br>
-<img src="image-2.png" width="500">
-<img src="image-3.png" width="510">
-
+<img src="image-2.png" width="300">
+<img src="image-3.png" width="310">
 
 **Vibecode**는 단순히 코드를 고치는 것을 넘어, 개발자가 "왜 이렇게 고쳐야 하는지"를 학습할 수 있는 환경을 제공합니다.<br><br>
 
@@ -262,6 +256,7 @@ Vibecode의 핵심인 AI 에이전트의 페르소나와 작동 규칙을 정의
 
 - **해결**  
   ngrok을 활용한 터널링 기술을 도입하여, 각자의 로컬 환경을 외부에서도 접속 가능하게 만들어 팀원들과 즉각적인 공동 작업 및 테스트를 원활하게 진행했습니다.
+
 
 <br>
 
@@ -288,8 +283,6 @@ Vibecode의 핵심인 AI 에이전트의 페르소나와 작동 규칙을 정의
 - **해결**  
   추후에는 대규모 인프라 모니터링에 특화된 Grafana 도구 및 전용 시각화 솔루션을 활용하여 해당 기능을 발전시킬 계획입니다.
 
-
-<br>
 
 ---
 
