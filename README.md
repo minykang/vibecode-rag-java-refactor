@@ -86,7 +86,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 
 <div align="center">
-  <img src="./images/nflow.gif" width="100%" alt="Vibecode 워크플로우 실행 과정">
+  <img src="nflow.gif" width="850px" alt="Vibecode 워크플로우 실행 과정">
   <p><i>▲ Slack 멘션부터 RAG 기반 리팩토링 응답까지의 전체 자동화 과정</i></p>
 </div>
 
