@@ -95,6 +95,7 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 ## 🚀 Workflow Steps
 
+<<<<<<< Updated upstream
 **1️⃣ Slack Trigger**: 슬랙 @멘션을 수신하여 리팩토링 워크플로우를 시작합니다.<br><br>
 **2️⃣ HTTP Request**: 구글·네이버의 최신 자바 스타일 가이드 원문을 실시간 수집합니다.<br><br>
 **3️⃣ HTML Extract**: 수집된 HTML 문서에서 노이즈를 제거하고 본문 텍스트만 추출합니다.<br><br>
@@ -103,11 +104,110 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 **6️⃣ RAG Indexing**: 데이터를 청크로 분할 후 Gemini 임베딩을 생성하여 Pinecone에 저장합니다.<br><br>
 **7️⃣ Sync Gate** 💡: 인덱싱 완료 시까지 대기 후 단일 신호를 발생시켜 AI의 중복 실행을 방지합니다.<br><br>
 **8️⃣ AI Agent**: Pinecone 검색 결과를 근거로 Gemini가 리팩토링 답변을 생성합니다.<br><br>
+=======
+**1️⃣ Slack Trigger**: 슬랙 @멘션을 수신하여 리팩토링 워크플로우를 시작합니다.<br>
+
+<img src="image-4.png" alt="slack mention" width="300">
+
+<br>
+
+**2️⃣ HTTP Request**: 구글·네이버의 최신 자바 스타일 가이드 원문을 실시간 수집합니다.
+
+<table align="center">
+  <tr>
+    <td align="center"><b>네이버 자바 스타일 가이드</b></td>
+    <td align="center"><b>구글 스타일 가이드 (Raw)</b></td>
+    <td align="center"><b>구글 자바 스타일 가이드</b></td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://naver.github.io/hackday-conventions-java/">
+        <img src="image-8.png" width="250px" height="150px">
+      </a>
+    </td>
+    <td>
+      <a href="https://raw.githubusercontent.com/JunHoPark93/google-java-styleguide/master/README.md">
+        <img src="image-6.png" width="250px" height="150px">
+      </a>
+    </td>
+    <td>
+      <a href="https://google.github.io/styleguide/javaguide.html">
+        <img src="image-7.png" width="250px" height="150px">
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+**3️⃣ HTML Extract**: 수집된 HTML 문서에서 노이즈를 제거하고 본문 텍스트만 추출합니다.
+
+수집된 원본 HTML 문서에서 불필요한 태그와 네비게이션 노이즈를 제거하여, LLM이 이해하기 최적화된 순수 텍스트 데이터만 추출합니다.
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%"><b>[Before] HTTP Request 원본 데이터</b></td>
+    <td align="center" width="50%"><b>[After] HTML Extract 정제 데이터</b></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="image-9.png" alt="Raw HTTP Output" width="100%">
+    </td>
+    <td>
+      <img src="image-12.png" alt="Cleaned Text Output" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li><code>&lt;li&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code> 등 다량의 HTML 태그 포함</li>
+        <li>메뉴 바, 링크 주소 등 분석에 불필요한 노이즈 혼재</li>
+        <li>데이터 구조가 파편화되어 가독성이 낮음</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>모든 HTML 태그가 제거된 <b>순수 텍스트(Plain Text)</b></li>
+        <li>스타일 가이드 본문 내용만 정확하게 추출 완료</li>
+        <li>LLM(Gemini)이 컨텍스트를 파악하기 최적화된 상태</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+**💡 정제 프로세스의 중요성**
+정제되지 않은 데이터를 그대로 사용할 경우 불필요한 토큰 소비가 발생하며, 벡터 검색 시 노이즈로 인해 정확도가 떨어질 수 있습니다. 본 프로세스를 통해 **토큰 효율을 극대화**하고 **RAG 성능을 향상**시켰습니다.
+
+<br>
+
+**4️⃣ Schema Normalize**: 추출된 텍스트에 출처(URL) 메타데이터를 부여하고 규격을 통일합니다.
+
+![alt text](image-10.png)
+
+
+<br>
+
+**5️⃣ Data Merge**: 분기되어 처리된 여러 문서 데이터를 하나의 흐름으로 통합합니다.<br>
+
+
+**6️⃣ RAG Indexing**: 데이터를 청크로 분할 후 Gemini 임베딩을 생성하여 Pinecone에 저장합니다.
+
+<img src="image-11.png" width="350px" height="300px">
+
+<br>
+
+**7️⃣ Sync Gate** 💡: 인덱싱 완료 시까지 대기 후 단일 신호를 발생시켜 AI의 중복 실행을 방지합니다.<br>
+
+**8️⃣ AI Agent**: Pinecone 검색 결과를 근거로 Gemini가 리팩토링 답변을 생성합니다.<br>
+
+>>>>>>> Stashed changes
 **9️⃣ Slack Delivery**: 최종 리뷰 결과를 슬랙 스레드 답장 형식으로 전송합니다.
 
 ---
 
 <br>
+
+
+## 페르소나 설정
 
 
 
