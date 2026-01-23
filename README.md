@@ -1,4 +1,11 @@
 # 🎯 Vibecode: RAG 기반 Java 리팩토링 자동화 봇
+<div align="center">
+  <img src="images/icon.png" width="100%" alt="Vibecode Banner">
+  
+
+</div>
+
+---
 
 > 💬 **"바이브 코딩의 속도에 실무 개발자의 견고함을 더하다"**
 >
@@ -19,6 +26,82 @@ Vibecode는 n8n을 오케스트레이터로 활용하여 Slack 멘션 한 번으
 
 
 ---
+
+## 🔄 Refactoring Comparison
+
+<p>단순한 코드 수정을 넘어, 실무 표준 가이드라인을 준수하는 견고한 코드로 변환합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th width="50%">❌ Before (Raw Source)</th>
+      <th width="50%">✅ After (Refactored)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre><code class="language-java">import java.util.*; import java.io.*;
+
+public class bad_example {
+
+public static void main(String [] args){
+
+  String str= "hello";int number =10; 
+  int another =20;
+
+if(number>5)another=number*10;else {number=another+5;}
+
+List&lt;Integer&gt; list= new ArrayList&lt;&gt;();
+list.add(1); list .add(2);list.add(3);
+
+for(int i=0;i&lt; list.size();i++)
+  System.out.println(list.get(i));
+
+System.out.println("done");}
+
+}
+</code></pre>
+      </td>
+      <td>
+        <pre><code class="language-java">import java.util.ArrayList;
+import java.util.List;
+
+public class BadExample {
+
+    public static void main(String[] args) {
+
+        String str = "hello";
+        int number = 10;
+        int another = 20;
+
+        if (number > 5) {
+            another = number * 10;
+        } else {
+            number = another + 5;
+        }
+
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        for (int i = 0; i &lt; list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
+        System.out.println("done");
+    }
+}
+</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+---
+
 
 ## 🎖️ 주요 기능
 
